@@ -6,6 +6,7 @@ function createRound(deck) {
     const round = {
         deck: deck,
         currentCard: deck[0],
+        turns: 0,
     }
     return round
 }
