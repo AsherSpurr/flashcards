@@ -39,7 +39,7 @@ describe('rounds', () => {
 
         expect(round.deck).to.deep.equal([card1, card2, card3])
     });
-    it.skip('should have current card property with value of 1st card', () => {
+    it('should have current card property with value of 1st card', () => {
         const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
         const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
         const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
