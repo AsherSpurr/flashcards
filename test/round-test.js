@@ -64,7 +64,7 @@ describe('rounds', () => {
 
         expect(round.turns).to.equal(0);
     });
-    it.skip('should have incorrect guesses property with value of empty array', () => {
+    it('should have incorrect guesses property with value of empty array', () => {
         const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
         const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
         const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
