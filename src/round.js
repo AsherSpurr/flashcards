@@ -14,6 +14,7 @@ function createRound(deck) {
 
 function takeTurn(guess, round) {
     round.turns++
+    return evaluateGuess(guess, round.currentCard.correctAnswer)
 }
 
 module.exports = {
