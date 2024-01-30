@@ -12,8 +12,13 @@ function createRound(deck) {
     return round
 }
 
+function takeTurn(guess, round) {
+    round.turns++
+}
+
 module.exports = {
     createRound,
-    //takeTurn,
-    //calculatePercentCorrect
+    takeTurn,
+    //calculatePercentCorrectn
+    //endRound
 }

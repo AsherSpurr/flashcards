@@ -18,7 +18,7 @@ const {evaluateGuess} = require('../src/turn');
 
         // const round = createRound(deck)
     // });
-describe('rounds', () => {
+describe('createRound', () => {
     it('should create an object', () => {
         const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
         const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
@@ -73,6 +73,37 @@ describe('rounds', () => {
         const round = createRound(deck);
 
         expect(round.incorrectGuesses).to.deep.equal([]);
+    });
+});
+
+describe('takeTurn', () => {
+    it('should update turns count', () => {
+        const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+        const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
+        const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
+        
+        const deck = createDeck([card1, card2, card3]);
+        const round = createRound(deck);
+        const guess = evaluateGuess('object', 'object')
+
+        takeTurn(guess, round)
+
+        expect(round.turns).to.equal(1)
+    });
+    it.skip('should evaluate guesses true or false', () => {
+
+    });
+    it.skip('should return feedback if correct', () => {
+
+    });
+    it.skip('should return feedback if false', () => {
+
+    });
+    it.skip('should update incorrectGuesses property if false', () => {
+
+    });
+    it.skip('should move current card to the next card', () => {
+
     });
 });
     
