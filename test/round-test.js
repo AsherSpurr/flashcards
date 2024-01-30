@@ -18,19 +18,24 @@ describe('Tests with beforeEach', () => {
     })
 describe('rounds', () => {
     it('should create an object', () => {
-    
+        expect(round).to.be.an('object')
     });
-    it('should have deck property with deck object value', () => {
-
+    it.skip('should have deck property with deck object value', () => {
+        expect(round.deck).to.deep.equal([card1, card2, card3])
     });
-    it('should have current card property with value of 1st card', () => {
-
+    it.skip('should have current card property with value of 1st card', () => {
+        expect(round.currentCard).to.deep.equal({
+            "id": 1,
+            "question": "What allows you to define a set of related information using key-value pairs?",
+            "answers": ["object", "array", "function"],
+            "correctAnswer": "object"
+          })
     });
-    it('should have turns property that starts at 0', () => {
-    
+    it.skip('should have turns property that starts at 0', () => {
+        expect(round.turns).to.equal(0)
     });
-    it('should have incorrect guesses property with value of empty array', () => {
-    
+    it.skip('should have incorrect guesses property with value of empty array', () => {
+        expect(round.incorrectGuesses).to.deep.equal([])
     });
 });
 });
