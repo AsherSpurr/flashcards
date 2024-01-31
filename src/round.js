@@ -8,18 +8,33 @@ function createRound(deck) {
         currentCard: deck[0],
         turns: 0,
         incorrectGuesses: [],
+        correctGuesses: []
     }
     return round
 }
 
 function takeTurn(guess, round) {
+    var count = 0
     round.turns++
-    return evaluateGuess(guess, round.currentCard.correctAnswer)
+    var evaluatedGuess = evaluateGuess(guess, round.currentCard.correctAnswer)
+    if(evaluateGuess(guess, round.currentCard.correctAnswer) === 'incorrect!'){
+        round.incorrectGuesses.push(round.currentCard.id)
+    }
+    else {
+        round.correctGuesses.push(round.currentCard.id)
+        // count++
+        // console.log(round.currentCard)
+        // var nextCard = round.currentCard.find(() => {
+        //     return round.currentCard !== 'deck[0]'
+        // })
+        // round.currentCard = nextCard
+    }
+    return evaluatedGuess
 }
 
 module.exports = {
     createRound,
     takeTurn,
-    //calculatePercentCorrectn
+    //calculatePercentCorrect
     //endRound
 }
