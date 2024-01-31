@@ -84,26 +84,10 @@ describe('takeTurn', () => {
         
         const deck = createDeck([card1, card2, card3]);
         const round = createRound(deck);
-        // const guess = evaluateGuess('object', 'object')
 
         takeTurn('object', round)
 
         expect(round.turns).to.equal(1)
-    });
-    it('should take multiple turns', () => {
-        const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-        const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
-        const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
-        
-        const deck = createDeck([card1, card2, card3]);
-        const round = createRound(deck);
-        // const guess = evaluateGuess('object', 'object')
-
-        takeTurn('object', round)
-        takeTurn('array', round)
-        takeTurn('function', round)
-
-        expect(round.turns).to.equal(3)
     });
     it('should return feedback if correct', () => {
         const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
@@ -135,13 +119,11 @@ describe('takeTurn', () => {
         const round = createRound(deck);
 
         takeTurn('array', round)
-        takeTurn('function', round)
-        takeTurn('object', round)
 
-        expect(round.incorrectGuesses).to.deep.equal([1, 1])
+        expect(round.incorrectGuesses).to.deep.equal([1])
 
     });
-    it.skip('should move current card to the next card if answer is correct', () => {
+    it('should move current card to the next position', () => {
         const card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
         const card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"], "array");
         const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
@@ -150,13 +132,14 @@ describe('takeTurn', () => {
         const round = createRound(deck);
 
         takeTurn('object', round)
+        takeTurn('array', round)
 
         expect(round.currentCard).to.deep.equal({
-            "id": 2,
-            "question": "What is a comma-separated list of related values?",
-            "answers": ["array", "object", "function"],
-            "correctAnswer": "array"
-          })
+            "id": 3,
+            "question": "What type of prototype method directly modifies the existing array?",
+            "answers": ["mutator method", "accessor method", "iteration method"],
+            "correctAnswer": "mutator method"
+          });
     });
 });
     

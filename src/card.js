@@ -1,10 +1,11 @@
 function createCard(id, question, answers, correctAnswer) {
-    return {
+    var card = {
         id: id,
         question: question,
         answers: answers,
         correctAnswer: correctAnswer,
     }
+    return card
 }
 
 module.exports = {

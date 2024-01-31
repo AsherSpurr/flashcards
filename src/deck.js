@@ -1,6 +1,9 @@
 
 function createDeck(cards) {
-    return cards
+    var deck = cards.map((card) => {
+        return card
+    })
+    return deck
 }
 
 function countCards(cardsDeck) {
