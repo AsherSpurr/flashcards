@@ -17,7 +17,7 @@ describe('test with beforeEach', () => {
     card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
 
     deck = createDeck([card1, card2, card3])
-  })
+  });
   describe('createDeck', function () {
     it('should create a deck from cards', function () {
       const expected = [{

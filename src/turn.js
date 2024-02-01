@@ -1,4 +1,3 @@
-
 function evaluateGuess(guess, correctAnswer) {
     if (guess === correctAnswer) {
         return 'correct!'
