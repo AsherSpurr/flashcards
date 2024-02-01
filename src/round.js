@@ -7,8 +7,6 @@ function createRound(deck) {
         turns: 0,
         incorrectGuesses: [],
         correctGuesses: [],
-        // count: 0,
-        // isRound: true,
     }
     return round
 }
