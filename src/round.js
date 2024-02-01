@@ -1,4 +1,4 @@
-const {evaluateGuess} = require('../src/turn');
+const { evaluateGuess } = require('../src/turn');
 
 function createRound(deck) {
     const round = {
@@ -15,7 +15,7 @@ function createRound(deck) {
 
 function takeTurn(guess, round) {
     var evaluatedGuess = evaluateGuess(guess, round.currentCard.correctAnswer)
-    if(evaluatedGuess === 'incorrect!'){
+    if (evaluatedGuess === 'incorrect!') {
         round.incorrectGuesses.push(round.currentCard.id)
     }
     else {
