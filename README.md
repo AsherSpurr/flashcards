@@ -1,61 +1,3 @@
-# FlashCards Starter Kit
-
-## Fork This Repo
-
-On the top right corner of this page, click the **Fork** button.
-
-## Setup
-
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
-
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
-
-Once you have cloned the repo, change into the directory and install the library dependencies using the command:
-
-```bash
-npm install
-```
-
-To verify that it is setup correctly, run `npm test` in your terminal. You should have skipped tests in your `card` test file show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
-
-```bash
-Your project is running...
-```
-
-*Note that you will not need to you run this file until you are running your `game` file in Iteration 3. Prior to that, you should strive to use TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-**Create all of your feature code files in the `src` directory.** Use the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to run the `node index.js` command in your terminal to run the game.
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `card-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
 
 _____________________________________________________  
 # README  
@@ -64,26 +6,32 @@ ______________________________________________________
 # Flashcards
 
 ### Abstract:
-
+This application is a set of flashcards with multiple-choice options that runs in your terminal
 
 ### Installation Instructions:
-
+- clone onto your local machine
+- cd into the repo
+- run npm install
+- run node index.js to start the game
 
 ### Preview of App:
 
+![Recorded_screen_1_V1](https://github.com/AsherSpurr/flashcards/assets/144856487/ea28f76d-51ab-4340-afb5-fc0edfe035c0)
 
 ### Context:
-
+This project was completed during week 7 of learning JavaScipt. This was the first implementation of TDD so it took me about 13-15 hrs to complete. 
 
 ### Contributors:
 Asher Spurr: https://github.com/AsherSpurr
 
 ### Learning Goals:
-
-
+- Contribute code to a partially constructed application
+- Follow spec/prompts to make a working application
+- Write modular, reusable code that follows SRP (Single Responsibility Principle)
+- Implement a robust testing suite using TDD
 ### Wins + Challenges:
 #### Wins:
-
+I am pleased with my implementation of TDD and my test cases for each file. This was my first time writing tests and my first time using them to drive my development. 
 #### Challenges:
-
+The project comp was difficult to follow at times. However, I do think that makes it good practice for what I may encounter on the job.
 
